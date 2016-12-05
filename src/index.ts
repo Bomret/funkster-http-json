@@ -1,8 +1,6 @@
-// tslint:disable-next-line:no-var-requires
-require("es6-promise/auto");
-
 import { compose } from "funkster-core";
-import { HttpContext, HttpPipe, Ok, body, setHeader } from "funkster-http";
+import { HttpContext, HttpPipe, NotAcceptable, Ok, UnsupportedMediaType, body, setHeader } from "funkster-http";
+import { parseAccepts } from "funkster-http-accepts";
 
 export type JsonParser = <T>(
   handler: (deserializedBody: T) => HttpPipe,
@@ -36,10 +34,25 @@ export function parseJson<T>(
   handler: (deserializedBody: T) => HttpPipe,
   deserialize: (json: string) => T = JSON.parse) {
 
-  return body(body => {
-    const json = body.toString();
-    const deserializedBody = deserialize(json);
-    return handler(deserializedBody);
+  return parseAccepts(accepts => {
+    if (!accepts.type("json")) {
+      return NotAcceptable();
+    }
+
+    return body(body => {
+      const json = body.toString();
+      let desBody: T;
+      try {
+        desBody = deserialize(json);
+      } catch (error) {
+        if (error instanceof SyntaxError) {
+          return UnsupportedMediaType(error.message);
+        }
+        throw error;
+      }
+
+      return handler(desBody);
+    });
   });
 }
 

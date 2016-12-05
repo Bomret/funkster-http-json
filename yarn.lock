@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@types/accepts@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@types/accepts/-/accepts-1.3.0.tgz#a1da2d2f40f6ed2b8f1a43ea378606835636f1bf"
+  dependencies:
+    "@types/node" "*"
+
 "@types/chai@3.4.30":
   version "3.4.30"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-3.4.30.tgz#d1e90d48d5d844fe2f56f0caf7f5aaebd2e29187"
@@ -10,9 +16,16 @@
   version "2.2.29"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.29.tgz#5e4906b516cab176b84d02ddfc114b29af142316"
 
-"@types/node@6.0.31":
+"@types/node@*", "@types/node@6.0.31":
   version "6.0.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.31.tgz#7d769d232b98fb2477fe610dcac1e8475c9820a3"
+
+accepts@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.3.tgz#c3ca7434938648c3e0d9c1e328dd68b622c284ca"
+  dependencies:
+    mime-types "~2.1.11"
+    negotiator "0.6.1"
 
 ansi-regex@^2.0.0:
   version "2.0.0"
@@ -153,6 +166,17 @@ funkster-core@^0.5.1:
   dependencies:
     es6-promise "^4.0.5"
 
+funkster-core@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/funkster-core/-/funkster-core-0.6.1.tgz#d62c26d032286e005ec311ed06d04bfdb3c6c2bb"
+
+funkster-http-accepts@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/funkster-http-accepts/-/funkster-http-accepts-0.5.0.tgz#3979ab37c7758eb87996013e81c72f79ebd311fb"
+  dependencies:
+    accepts "^1.3.3"
+    funkster-http "^0.6.0"
+
 funkster-http@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/funkster-http/-/funkster-http-0.5.1.tgz#6d76f4dc9ad7aa70b782901c008268f7cac6467b"
@@ -160,6 +184,16 @@ funkster-http@^0.5.1:
     es6-promise "^4.0.5"
     finalhandler "^0.5.1"
     funkster-core "^0.5.1"
+    parseurl "^1.3.1"
+    path-to-regexp "^1.7.0"
+    raw-body "^2.1.7"
+
+funkster-http@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/funkster-http/-/funkster-http-0.6.0.tgz#3c53686f16871af6ddf91565c1a5710f21467ba2"
+  dependencies:
+    finalhandler "^0.5.1"
+    funkster-core "^0.6.1"
     parseurl "^1.3.1"
     path-to-regexp "^1.7.0"
     raw-body "^2.1.7"
@@ -285,6 +319,16 @@ make-error@^1.1.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.2.1.tgz#9a6dfb4844423b9f145806728d05c6e935670e75"
 
+mime-db@~1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.25.0.tgz#c18dbd7c73a5dbf6f44a024dc0d165a1e7b1c392"
+
+mime-types@~2.1.11:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.13.tgz#e07aaa9c6c6b9a7ca3012c69003ad25a39e92a88"
+  dependencies:
+    mime-db "~1.25.0"
+
 "minimatch@2 || 3", minimatch@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
@@ -324,6 +368,10 @@ mocha@^3.0.1:
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
+
+negotiator@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -475,7 +523,7 @@ type-detect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-1.0.0.tgz#762217cc06db258ec48908a1298e8b95121e8ea2"
 
-typescript@rc:
+typescript@^2.0.10:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.1.1.tgz#41c2b64472f529331b2055c0424862b44ce58d42"
 

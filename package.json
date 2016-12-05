@@ -2,14 +2,16 @@
   "name": "funkster-http-json",
   "version": "0.0.0",
   "description": "funkster-http-json",
-  "license": "MIT",
+  "license": "Unlicense",
   "repository": "",
   "author": "",
   "keywords": [
     ""
   ],
   "files": [
-    "lib"
+    "index.js",
+    "lib",
+    "README.md"
   ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -22,11 +24,13 @@
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
-    "es6-promise": "^4.0.5",
+    "accepts": "^1.3.3",
     "funkster-core": "^0.5.1",
-    "funkster-http": "^0.5.1"
+    "funkster-http": "^0.5.1",
+    "funkster-http-accepts": "^0.5.0"
   },
   "devDependencies": {
+    "@types/accepts": "^1.3.0",
     "@types/chai": "3.4.30",
     "@types/mocha": "2.2.29",
     "@types/node": "6.0.31",
@@ -35,9 +39,9 @@
     "rimraf": "^2.5.4",
     "ts-node": "^1.2.2",
     "tslint": "3.15.1",
-    "typescript": "rc"
+    "typescript": "^2.0.10"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.6.1"
   }
 }

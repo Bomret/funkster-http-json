@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "es3",
+    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./lib",
     "preserveConstEnums": true,
     "removeComments": true,
-    "lib": [
-      "dom",
-      "es2015.promise",
-      "es5"
-    ]
+    "sourceMap": true
   },
   "include": [
     "src/**/*"
