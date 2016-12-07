@@ -21,19 +21,21 @@ function respondWithJson(json: string): HttpPipe {
     Ok(json));
 }
 
-export function sendJson<T>(
+export function sendJsonWith<T>(
   obj: T,
-  respond: (json: string) => HttpPipe = respondWithJson,
-  serialize: (obj: T) => string = JSON.stringify) {
-
-  const json = serialize(obj);
-  return respond(json);
+  handler: (json: string) => HttpPipe,
+  toJson: (obj: T) => string): HttpPipe {
+  const json = toJson(obj);
+  return handler(json);
 }
 
-export function parseJson<T>(
-  handler: (deserializedBody: T) => HttpPipe,
-  deserialize: (json: string) => T = JSON.parse) {
+export function sendJson<T>(obj: T): HttpPipe {
+  return sendJsonWith(obj, respondWithJson, JSON.stringify);
+}
 
+export function parseJsonWith<T>(
+  handler: (deserializedBody: T) => HttpPipe,
+  fromJson: (json: string) => T): HttpPipe {
   return parseAccepts(accepts => {
     if (!accepts.type("json")) {
       return NotAcceptable();
@@ -43,7 +45,7 @@ export function parseJson<T>(
       const json = body.toString();
       let desBody: T;
       try {
-        desBody = deserialize(json);
+        desBody = fromJson(json);
       } catch (error) {
         if (error instanceof SyntaxError) {
           return UnsupportedMediaType(error.message);
@@ -54,6 +56,10 @@ export function parseJson<T>(
       return handler(desBody);
     });
   });
+}
+
+export function parseJson<T>(handler: (deserializedBody: T) => HttpPipe) {
+  return parseJsonWith(handler, JSON.parse);
 }
 
 export function mapJsonWith<Source, Target>(
