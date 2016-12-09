@@ -1,19 +1,27 @@
 {
   "name": "funkster-http-json",
-  "version": "0.0.0",
-  "description": "funkster-http-json",
+  "version": "0.5.0",
+  "description": "Funkster is a compositional server library. This package contains combinators to parse and write JSON bodies.",
   "license": "Unlicense",
-  "repository": "",
-  "author": "",
+  "repository": "git@github.com:Bomret/funkster-http-json.git",
+  "author": "Stefan Reichel <dev@bomret.com>",
   "keywords": [
-    ""
+    "server",
+    "node",
+    "funkster",
+    "http",
+    "web",
+    "json",
+    "body"
   ],
   "files": [
     "index.js",
     "lib",
-    "README.md"
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "clean": "rimraf lib",
