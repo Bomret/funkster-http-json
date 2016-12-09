@@ -1,7 +1,6 @@
 import { compose } from "funkster-core";
 import { body, HttpContext, HttpPipe, NotAcceptable, Ok, setHeader, UnsupportedMediaType } from "funkster-http";
-import { parseAcceptHeaders } from "funkster-http-headers-accept";
-import { setContentType } from "funkster-http-headers-content";
+import { parseContentHeaders, setContentType } from "funkster-http-headers-content";
 
 export type JsonParser = <T>(
   handler: (deserializedBody: T) => HttpPipe,
@@ -37,22 +36,15 @@ export function sendJson<T>(obj: T): HttpPipe {
 export function parseJsonWith<T>(
   handler: (deserializedBody: T) => HttpPipe,
   fromJson: (json: string) => T): HttpPipe {
-  return parseAcceptHeaders(accepts => {
-    if (!accepts.type("json")) {
-      return NotAcceptable();
+
+  return parseContentHeaders(contents => {
+    if (!contents.contentType || !contents.contentType.type.match(/json/)) {
+      return UnsupportedMediaType();
     }
 
     return body(body => {
       const json = body.toString();
-      let desBody: T;
-      try {
-        desBody = fromJson(json);
-      } catch (error) {
-        if (error instanceof SyntaxError) {
-          return UnsupportedMediaType(error.message);
-        }
-        throw error;
-      }
+      const desBody = fromJson(json);
 
       return handler(desBody);
     });
@@ -67,6 +59,7 @@ export function mapJsonWith<Source, Target>(
   map: JsonTransform<Source, Target>,
   jsonParse: JsonParser,
   jsonSend: JsonSender) {
+
   return jsonParse<Source>(json =>
     async (ctx: HttpContext) => {
       const target = await map(json);
