@@ -1,6 +1,7 @@
 import { compose } from "funkster-core";
 import { body, HttpContext, HttpPipe, NotAcceptable, Ok, setHeader, UnsupportedMediaType } from "funkster-http";
-import { parseAccepts } from "funkster-http-accepts";
+import { parseAcceptHeaders } from "funkster-http-headers-accept";
+import { setContentType } from "funkster-http-headers-content";
 
 export type JsonParser = <T>(
   handler: (deserializedBody: T) => HttpPipe,
@@ -17,7 +18,7 @@ export type JsonTransform<Source, Target> = (source: Source) => Promise<Target>;
 
 function respondWithJson(json: string): HttpPipe {
   return compose(
-    setHeader("Content-Type", "application/json; charset=utf-8"),
+    setContentType({ type: "application/json", parameters: { charset: "utf-8" } }),
     Ok(json));
 }
 
@@ -36,7 +37,7 @@ export function sendJson<T>(obj: T): HttpPipe {
 export function parseJsonWith<T>(
   handler: (deserializedBody: T) => HttpPipe,
   fromJson: (json: string) => T): HttpPipe {
-  return parseAccepts(accepts => {
+  return parseAcceptHeaders(accepts => {
     if (!accepts.type("json")) {
       return NotAcceptable();
     }

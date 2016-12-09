@@ -178,6 +178,14 @@ configstore@^2.0.0:
     write-file-atomic "^1.1.2"
     xdg-basedir "^2.0.0"
 
+content-disposition@^0.5.1:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.2.tgz#0cf68bb9ddf5f2be7961c3a85178cb85dba78cb4"
+
+content-type@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.2.tgz#b7d113aee7a8dd27bd21133c4dc2529df1721eed"
+
 cookiejar@^2.0.6:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cookiejar/-/cookiejar-2.1.0.tgz#86549689539b6d0e269b6637a304be508194d898"
@@ -294,11 +302,19 @@ funkster-core@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/funkster-core/-/funkster-core-0.6.1.tgz#d62c26d032286e005ec311ed06d04bfdb3c6c2bb"
 
-funkster-http-accepts@^0.5.0:
+funkster-http-headers-accept@^0.5.0:
   version "0.5.0"
-  resolved "https://registry.yarnpkg.com/funkster-http-accepts/-/funkster-http-accepts-0.5.0.tgz#3979ab37c7758eb87996013e81c72f79ebd311fb"
+  resolved "https://registry.yarnpkg.com/funkster-http-headers-accept/-/funkster-http-headers-accept-0.5.0.tgz#f2cd275a16f54fdd7c70b7d3e3fe8c28da742c3f"
   dependencies:
     accepts "^1.3.3"
+    funkster-http "^0.6.0"
+
+funkster-http-headers-content@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/funkster-http-headers-content/-/funkster-http-headers-content-0.5.0.tgz#d251ea8f19a656003da8ef59e17047369cddb7c0"
+  dependencies:
+    content-disposition "^0.5.1"
+    content-type "^1.0.2"
     funkster-http "^0.6.0"
 
 funkster-http@^0.6.0:
@@ -894,7 +910,7 @@ type-detect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-1.0.0.tgz#762217cc06db258ec48908a1298e8b95121e8ea2"
 
-typescript@^2.0.10:
+typescript@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.1.4.tgz#b53b69fb841126acb1dd4b397d21daba87572251"
 
