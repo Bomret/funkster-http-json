@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/funkster-http-json.svg)](https://www.npmjs.com/package/funkster-http-json)
 [![node](https://img.shields.io/node/v/funkster-http-json.svg)](http://nodejs.org/download/)
 [![npm](https://img.shields.io/npm/dt/funkster-http-json.svg)](https://www.npmjs.com/package/funkster-http-json)
+[![Known Vulnerabilities](https://snyk.io/test/github/bomret/funkster-http-json/badge.svg)](https://snyk.io/test/github/bomret/funkster-http-json)
 [![Travis](https://travis-ci.org/Bomret/funkster-http-json.svg?branch=master)](https://travis-ci.org/Bomret/funkster-http-json)
 
 Funkster is a compositional server library. This package provides types and combinators to parse json bodies from requests and respond with json to the client.
