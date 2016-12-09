@@ -1,7 +1,7 @@
 {
   "name": "funkster-http-json",
   "version": "0.5.0",
-  "description": "Funkster is a compositional server library. This package contains combinators to parse and write JSON bodies.",
+  "description": "Funkster is a compositional server library. This package provides types and combinators to parse json bodies from requests and respond with json to the client.",
   "license": "Unlicense",
   "repository": "git@github.com:Bomret/funkster-http-json.git",
   "author": "Stefan Reichel <dev@bomret.com>",
