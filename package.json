@@ -24,11 +24,13 @@
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
-    "funkster-http-accepts": "^0.5.0"
+    "funkster-http-headers-content": "^0.5.0"
   },
   "devDependencies": {
     "@types/accepts": "^1.3.0",
     "@types/chai": "3.4.34",
+    "@types/content-disposition": "^0.5.0",
+    "@types/content-type": "^1.0.33",
     "@types/mocha": "2.2.33",
     "@types/node": "6.0.51",
     "@types/supertest": "^2.0.0",
