@@ -32,6 +32,7 @@
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
+    "funkster-http-headers-accept": "^0.5.0",
     "funkster-http-headers-content": "^0.5.0"
   },
   "devDependencies": {
