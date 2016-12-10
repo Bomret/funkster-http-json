@@ -13,6 +13,8 @@ Funkster is a compositional server library. This package provides types and comb
 $ npm install funkster-http-json
 ```
 
+[Typscript](http://www.typescriptlang.org/) is used to illustrate the examples.
+
 ## Parsing JSON from a request body
 The `parseJson` and `parseJsonWith` combinators can be used to parse JSON data from a request.
 In a valid request the `Content-Type` header contains `json` and a request body must be present, otherwise a `415 Unsupported Media Type` is returned.
