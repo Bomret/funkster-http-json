@@ -98,7 +98,7 @@ const server = http.createServer(asRequestListener(greet));
 // start the node HTTP server and send a simple GET.
 ```
 
-## Build a JSON api
+## Building a JSON api
 The `mapJson` and `mapJsonWith` combinators allow to build a `HttpPipe` that consumes JSON requests, maps the data and produces JSON responses.
 
 ### Example:
