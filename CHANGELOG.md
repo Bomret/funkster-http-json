@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2016-12-11
+### Changed
+- `sendJsonWith` now retuns a `406` if the client's Accept header does not allow JSON.
+
 ## [0.6.0] - 2016-12-09
 ### Changed
 - `parseJson` and `parseJsonWith` now return a `415` for a catched `SyntaxError`.  
