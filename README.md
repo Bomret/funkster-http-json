@@ -60,6 +60,7 @@ const server = http.createServer(asRequestListener(greet));
 
 ## Sending JSON to the client
 The `sendJson` and `sendJsonWith` combinators can be used to send proper JSON responses to the client.
+In a valid request the `Accept` header allows `json`, otherwise a `406 Not Acceptable` is returned.
 
 ### Example:
 ```javascript
