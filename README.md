@@ -7,6 +7,8 @@
 [![bitHound](https://img.shields.io/bithound/code/github/bomret/funkster-http-json.svg)](https://www.bithound.io/github/Bomret/funkster-http-json/master)
 [![Travis](https://travis-ci.org/Bomret/funkster-http-json.svg?branch=master)](https://travis-ci.org/Bomret/funkster-http-json)
 
+![Icon](./icon.png)
+
 Funkster is a compositional server library. This package provides types and combinators to parse json bodies from requests and respond with json to the client.
 
 > [Typscript](http://www.typescriptlang.org/) is used to illustrate the examples.
@@ -193,3 +195,6 @@ const server = http.createServer(asRequestListener(getUserInfo));
 
 // start the node HTTP server and send e.g. a POST with '{ "id": "1234" }'.
 ```
+
+## Meta
+Icon [funky](https://thenounproject.com/search/?q=funky&i=72105) by [iconsmind.com](https://thenounproject.com/imicons/) from the Noun Project.
