@@ -9,12 +9,22 @@
 
 Funkster is a compositional server library. This package provides types and combinators to parse json bodies from requests and respond with json to the client.
 
+> [Typscript](http://www.typescriptlang.org/) is used to illustrate the examples.
+
 ## Install
 ```bash
 $ npm install funkster-http-json
 ```
 
-[Typscript](http://www.typescriptlang.org/) is used to illustrate the examples.
+## Build
+```bash
+$ npm install && npm run build
+```
+
+## Test
+```bash
+$ npm run test
+```
 
 ## Parsing JSON from a request body
 The `parseJson` and `parseJsonWith` combinators can be used to parse JSON data from a request.
