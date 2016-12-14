@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:latest",
+  "extends": "tslint:recommended",
   "rules": {
     "curly": false,
     "interface-name": [
@@ -10,13 +10,9 @@
     "trailing-comma": [
       true,
       {
-        "multiline": "true",
+        "multiline": "never",
         "singleline": "never"
       }
-    ],
-    "indent": [
-      true,
-      "spaces"
     ]
   }
 }
