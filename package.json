@@ -38,7 +38,7 @@
     "funkster-http-headers-content": "^0.7.0"
   },
   "devDependencies": {
-    "@types/mocha": "2.2.33",
+    "@types/mocha": "2.2.34",
     "@types/supertest": "^2.0.0",
     "mocha": "^3.0.1",
     "rimraf": "^2.5.4",
