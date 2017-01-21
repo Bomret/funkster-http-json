@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "funkster-core": "^0.8.5",
-    "funkster-http": "^0.6.2",
+    "funkster-http": "^0.6.8",
     "funkster-http-headers-accept": "^0.7.2",
     "funkster-http-headers-content": "^0.7.0"
   },
