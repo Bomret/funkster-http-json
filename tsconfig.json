@@ -1,21 +1,23 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
+    "target": "es5",
     "declaration": true,
-    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "outDir": "./lib",
+    "outDir": "lib",
     "preserveConstEnums": true,
     "removeComments": true,
-    "sourceMap": true
+    "lib": [
+      "dom",
+      "es2015.promise",
+      "es5"
+    ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "**/*-spec.ts"
+    "node_modules"
   ]
 }
