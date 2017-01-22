@@ -18,7 +18,7 @@ export type JsonTransform<Source, Target> = (source: Source) => Promise<Target>
 
 function respondWithJson(json: string): HttpPipe {
   return compose(
-    setContentType({ parameters: { charset: 'utf-8' }, type: 'application/json' }),
+    setContentType({ mediaType: 'application/json', parameters: { charset: 'utf-8' } }),
     Ok(json))
 }
 
@@ -45,7 +45,7 @@ export function parseJsonWith<T>(
   fromJson: (json: string) => T): HttpPipe {
 
   return parseContentHeaders((content) => {
-    if (!content.type || !content.type.type.match(/json/)) {
+    if (!content.type || !content.type.mediaType.match(/json/)) {
       return UnsupportedMediaType()
     }
 

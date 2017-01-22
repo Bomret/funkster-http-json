@@ -1290,7 +1290,7 @@ fs@0.0.1-security:
   version "0.0.1-security"
   resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
 
-funkster-core@^0.8.5, funkster-core@^0.8.7:
+funkster-core@^0.8.7:
   version "0.8.7"
   resolved "https://registry.yarnpkg.com/funkster-core/-/funkster-core-0.8.7.tgz#3618bdc1f2c9f66ed4b7c854f109f9bfef43a58c"
 
@@ -1302,9 +1302,9 @@ funkster-http-headers-accept@^0.7.3:
     accepts "^1.3.3"
     funkster-http "^0.6.8"
 
-funkster-http-headers-content@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/funkster-http-headers-content/-/funkster-http-headers-content-2.0.0.tgz#df9d47298a5207ccd1b89ac8bb8942e934045f21"
+funkster-http-headers-content@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/funkster-http-headers-content/-/funkster-http-headers-content-3.0.0.tgz#f1b04a76841eda69f821c1ccc2d40400d5409229"
   dependencies:
     "@types/content-disposition" "^0.5.1"
     "@types/content-type" "^1.0.33"
@@ -1832,10 +1832,11 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-husky@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-0.12.0.tgz#3a44922fce8071803242c3c7522a6582c50525dc"
+husky@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-0.13.0.tgz#791f77e7ad854127962c6eef2675a73d481a34e1"
   dependencies:
+    chalk "^1.1.3"
     find-parent-dir "^0.3.0"
     is-ci "^1.0.9"
     normalize-path "^1.0.0"
