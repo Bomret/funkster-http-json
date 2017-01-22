@@ -24,10 +24,10 @@
     "semantic-release": "semantic-release pre && npm run release && semantic-release post"
   },
   "dependencies": {
-    "funkster-core": "^0.8.5",
+    "funkster-core": "^0.8.7",
     "funkster-http": "^0.6.8",
     "funkster-http-headers-accept": "^0.7.3",
-    "funkster-http-headers-content": "^0.7.0"
+    "funkster-http-headers-content": "^2.0.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.35",

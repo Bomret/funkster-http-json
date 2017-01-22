@@ -44,8 +44,8 @@ export function parseJsonWith<T>(
   handler: (deserializedBody: T) => HttpPipe,
   fromJson: (json: string) => T): HttpPipe {
 
-  return parseContentHeaders((contents) => {
-    if (!contents.contentType || !contents.contentType.type.match(/json/)) {
+  return parseContentHeaders((content) => {
+    if (!content.type || !content.type.type.match(/json/)) {
       return UnsupportedMediaType()
     }
 
