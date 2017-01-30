@@ -20,7 +20,8 @@
     "prepush": "npm run test",
     "build": "gulp build",
     "test": "gulp test",
-    "release": "gulp package && npm publish dist/package.tar.gz",
+    "package": "gulp package",
+    "release": "npm run package && npm publish dist/package.tar.gz",
     "semantic-release": "semantic-release pre && npm run release && semantic-release post"
   },
   "dependencies": {
