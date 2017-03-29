@@ -27,7 +27,7 @@
   "dependencies": {
     "funkster-core": "^0.8.7",
     "funkster-http": "^0.6.8",
-    "funkster-http-headers-accept": "^0.7.3",
+    "funkster-http-headers-accept": "^0.7.12",
     "funkster-http-headers-content": "^8.0.0"
   },
   "devDependencies": {
