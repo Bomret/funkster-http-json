@@ -46,7 +46,7 @@
     "husky": "^0.13.1",
     "merge2": "^1.0.3",
     "semantic-release": "^6.3.2",
-    "standard": "^10.0.1",
+    "standard": "^10.0.3",
     "supertest": "^3.0.0",
     "ts-node": "^3.0.1",
     "tslint": "~4.5.0",
