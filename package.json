@@ -31,7 +31,7 @@
     "funkster-http-headers-content": "^8.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.35",
+    "@types/mocha": "^2.2.43",
     "@types/supertest": "^2.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "del": "^2.2.2",
