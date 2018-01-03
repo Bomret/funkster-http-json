@@ -36,7 +36,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-gzip": "^1.4.0",
+    "gulp-gzip": "1.4.0",
     "gulp-help": "^1.6.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^4.0.0",
