@@ -48,7 +48,7 @@
     "semantic-release": "^6.3.2",
     "standard": "^10.0.1",
     "supertest": "^3.0.0",
-    "ts-node": "^3.0.1",
+    "ts-node": "^6.0.5",
     "tslint": "~4.5.0",
     "typescript": "^2.1.4"
   },
